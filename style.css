@@ -1,0 +1,173 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  width: 150px;
+  height: initial;
+  padding: 0;
+  margin:0;
+
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #e7e5e4;
+}
+
+
+/* Navbar CSS */
+.nav {
+  background-color: white;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: rotateX(1deg);
+}
+
+.nav h1 {
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+/* form CSS */
+form{
+  box-sizing: border-box;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #F6F7F8;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  padding: 50px;
+  width: 450px;
+
+}
+form section p{
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 10px;
+  
+
+}
+
+form h3{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form label{
+  width: 70px;
+  text-align: right;
+  padding-right: 10px;
+
+}
+
+form input[type="checkbox"]{
+  width: auto;
+  
+}
+form button{
+  font-size: 16px;
+  font-weight: bold;
+  width: 90px;
+ 
+
+  color: #FFFFFF;
+  background-color: #5995DA;
+
+  border: none;
+  border-radius: 3px;
+
+  padding: 5px 10px;
+  cursor: pointer;
+
+}
+
+/* section */
+.sec{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:90px;
+  margin: 60px;
+}
+
+.card{
+  background-color:#fffbeb;
+  padding: 20px;
+  font-size: 1.1rem;
+  border-radius: 10px;  
+  
+}
+
+::backdrop {
+ 
+  opacity: 0.75;
+}
+
+dialog {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
