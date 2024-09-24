@@ -46,20 +46,15 @@ h6 {
   overflow-wrap: break-word;
 }
 
-#root,
-#__next {
-  isolation: isolate;
-}
 
 body {
-  width: 100vw;
-  height: 100vh;
+
   background-color: #e7e5e4;
 }
 
 
 /* Navbar CSS */
-.nav {
+nav {
   background-color: white;
   padding: 15px;
   display: flex;
@@ -70,7 +65,7 @@ body {
   transform: rotateX(1deg);
 }
 
-.nav h1 {
+nav h1 {
   margin-right: auto;
   margin-left: auto;
 
@@ -142,27 +137,6 @@ form button{
 
 }
 
-/* section */
-.sec{
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap:90px;
-  margin: 60px;
-}
-
-.card{
-  background-color:#fffbeb;
-  padding: 20px;
-  font-size: 1.1rem;
-  border-radius: 10px;  
-  
-}
-
-::backdrop {
- 
-  opacity: 0.75;
-}
-
 dialog {
   top: 50%;
   left: 50%;
@@ -170,4 +144,25 @@ dialog {
   -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+}
+
+/* section */
+.book-sec{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:30px;
+  margin: 60px;
+}
+
+.card{
+  background-color:#b0a998;
+  padding: 20px;
+  font-size: 1.1rem;
+  border-radius: 10px;  
+  
+}
+
+
+::backdrop {
+  opacity: 0.75;
 }
