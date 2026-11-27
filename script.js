@@ -1,62 +1,45 @@
 // stores all the books
 let myLibrary = [];
-
 // Book Constructor
 function Book(name, author, pages, readStatus, id) {
-
     this.name = name;
     this.author = author;
     this.pages = pages;
     this.readStatus = readStatus;
     this.id = id;
-
 }
 
-
 function addBookToLibrary(name, author, pages, readStatus) {
-
     let id = crypto.randomUUID();
     let book = new Book(name, author, pages, readStatus, id);
     myLibrary.push(book);
-
 }
 
-
 function displayBooks(myLibrary) {
-    
     let main = document.querySelector("#main");
     main.textContent = " ";
-   
+
     myLibrary.forEach((element) => {
 
         let card = document.createElement("div");
         card.classList.add("card");
         card.dataset.id = element.id;
 
-
         let title = document.createElement("div");
         title.textContent = `author: ${element.name}`;
-
-
         let author = document.createElement("div");
         author.textContent = `author: ${element.author}`;
-
-
         let pages = document.createElement('div');
         pages.textContent = `pages: ${element.pages}`;
-
-
         let readStatus = document.createElement("div");
         if (element.readStatus)
             readStatus.textContent = `Read Status: Has been read`;
         else
             readStatus.textContent = `Read Status: Has not been read yet`;
 
-
         let removeBtn = document.createElement("button");
         removeBtn.textContent = `DELETE`;
         removeBtn.classList.add("removeBtn");
-
 
 
         card.appendChild(title);
@@ -65,25 +48,16 @@ function displayBooks(myLibrary) {
         card.appendChild(readStatus);
         card.appendChild(removeBtn);
         main.appendChild(card);
-
-        let remove = document.querySelector(".removeBtn");
-        remove.addEventListener('click', () => {
-
-        });
-
     });
-
 }
-
 
 let addNewBook = document.querySelector("#newBook");
 addNewBook.addEventListener('click', () => {
-    
+
     let dlg = document.querySelector("dialog");
     dlg.showModal();
 
 });
-
 
 let dialogAdd = document.querySelector("#dialogAdd");
 dialogAdd.addEventListener("click", () => {
@@ -96,7 +70,7 @@ dialogAdd.addEventListener("click", () => {
     console.log(name, author, pages, readStatus);
 
     addBookToLibrary(name, author, pages, readStatus);
-    
+
     displayBooks(myLibrary);
 
 });
